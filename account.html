@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ron Empire</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+  <link rel="stylesheet" href="style.css">
+ 
+
+  
+
+</head>
+
+<body>
+  <section id="header">
+    <a href="index.html" ><img src="img/logo.png" class="logo1" alt=""></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a  href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="lg-bag"><a class="active" href="user.html"><i class="far fa-user"></i></a></li>
+        <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+        <a href="#" id="close"><i class="far fa-times"></i></a>   
+      </ul>
+    </div>
+
+    <div id="mobile">
+      <a href="user.html"><i class="far fa-user"></i></a>
+      <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+
+    </div>
+  </section>
+
+  <section id="page-header" class="about-header">
+    <h2>User Profile Dashboard</h2>
+  </section>
+
+  <section id="profile3" class="section-p1">
+    <form id="profileForm">
+      <h3>Profile Information</h3>
+      <br><br>
+      <div>
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" placeholder="First Name" required>
+      </div>
+      <br><br>
+      <div>
+        <label for="middleName">Middle Name:</label><br>
+        <input type="text" id="middleName" placeholder="Middle Name" required>
+      </div>
+      <br><br>
+      <div>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+      </div>
+      <br><br>
+      <div>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="emailaddress@example.com" required>
+      </div>
+      <br><br>
+      <div>
+        <label for="birthdate">Birth Date:</label>
+        <input type="date" id="birthdate"  required>
+      </div>
+      <br><br>
+      <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+      </div>
+      <br><br>
+      <div>
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <br><br>
+      
+      <button id="editformBtn" class="normal">Edit Information</button>
+    <button id="saveformBtn" class="normal" style="display: none;">Save Information</button>
+    </form>
+    
+ </section>
+
+ <section id="profile2" class="section-p1">
+  
+
+ <section id="settings" class="section-p1">
+    <h3>Account Settings</h3>
+    
+    <a href="password.html"><button class="normal">Change Password</button></a>
+    <a href="delete.html"><button class="normal">Delete Account</button></a>
+ </section>
+ 
+
+  <section id="newsletter" class="section-p1" class="section-m1">
+    <div class="newstext"> 
+      <h4>Sign Up For Newsletters</h4>
+      <p>Get E-mail updates about our latest shop and <span>special offers</span> .</p>
+    </div>
+    <div class="form">
+      <input type="text" placeholder="Your email address">
+      <button class="normal">Sign Up</button>
+    </div>
+
+  </section>
+
+  <footer class="section-p1">
+    <div class="col">
+      <img class="logo" src="img/logo1.png" alt="">
+      <h4>Contact</h4>
+      <p><strong>Adress:</strong> 62 Wellington Road, Street 32, Lekki Lagos</p>
+      <p><strong>Phone:</strong> +234 801 234 5678</p>
+      <p><strong>Hours:</strong> 10:00 - 18:00, Mon- Sat </p>
+      <div class="follow">
+        <h4> Follow Us</h4>
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <h4>About</h4>
+      <a href="about.html">About Us</a>
+      <a href="address.html">Delivery Imformations</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="col">
+      <h4>My account</h4>
+      <a href="signin.html">Sign In</a>
+      <a href="cart.html">View Cart</a>
+      <a href="wishlist.html">My Wishlist</a>
+      <a href="orders.html">Track My Order</a>
+      <a href="contact.html">Help</a>
+    </div>
+
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Stor Or Google Play</p>
+      <div class="row">
+        <img src="img/pay/app.jpg" alt="">
+        <img src="img/pay/play.jpg" alt="">
+        <p>Secrured Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="">
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p><strong>RonEmpire</strong>&copy;2024 DESIGNED BY <strong>SHARON</strong>. </p>
+    </div>
+
+  </footer>
+
+
+  <script>
+    // Selecting necessary elements
+    const firstNameInput = document.getElementById('firstName');
+    const middleNameInput = document.getElementById('middleName');
+    const lastNameInput = document.getElementById('lastName');
+    const emailInput = document.getElementById('email');
+    const birthdateInput = document.getElementById('birthdate');
+    const phoneNumberInput = document.getElementById('phoneNumber');
+    const genderSelect = document.getElementById('gender');
+    const editFormBtn = document.getElementById('editformBtn');
+    const saveFormBtn = document.getElementById('saveformBtn');
+    
+    // Function to make the form fields editable
+    function makeFormEditable() {
+      // Enable editing for all input fields and select
+      firstNameInput.removeAttribute('readonly');
+      middleNameInput.removeAttribute('readonly');
+      lastNameInput.removeAttribute('readonly');
+      emailInput.removeAttribute('readonly');
+      birthdateInput.removeAttribute('readonly');
+      phoneNumberInput.removeAttribute('readonly');
+      genderSelect.removeAttribute('disabled');
+    
+      // Show the save button and hide the edit button
+      saveFormBtn.style.display = 'inline';
+      editFormBtn.style.display = 'none';
+    }
+    
+    // Function to save the edited form details
+    function saveFormDetails() {
+      // Get the updated form values
+      const updatedFirstName = firstNameInput.value;
+      const updatedMiddleName = middleNameInput.value;
+      const updatedLastName = lastNameInput.value;
+      const updatedEmail = emailInput.value;
+      const updatedBirthdate = birthdateInput.value;
+      const updatedPhoneNumber = phoneNumberInput.value;
+      const updatedGender = genderSelect.value;
+    
+      // Perform any validation if needed
+    
+      // Save the updated form details to localStorage
+      localStorage.setItem('profileData', JSON.stringify({
+        firstName: updatedFirstName,
+        middleName: updatedMiddleName,
+        lastName: updatedLastName,
+        email: updatedEmail,
+        birthdate: updatedBirthdate,
+        phoneNumber: updatedPhoneNumber,
+        gender: updatedGender
+      }));
+    
+      // Disable editing and hide the save button, show the edit button
+      firstNameInput.setAttribute('readonly', true);
+      middleNameInput.setAttribute('readonly', true);
+      lastNameInput.setAttribute('readonly', true);
+      emailInput.setAttribute('readonly', true);
+      birthdateInput.setAttribute('readonly', true);
+      phoneNumberInput.setAttribute('readonly', true);
+      genderSelect.setAttribute('disabled', true);
+      saveFormBtn.style.display = 'none';
+      editFormBtn.style.display = 'inline';
+    }
+    
+    // Event listener for the edit button
+    editFormBtn.addEventListener('click', makeFormEditable);
+    
+    // Event listener for the save button
+    saveFormBtn.addEventListener('click', saveFormDetails);
+    
+    // Function to load saved form data from localStorage
+    function loadSavedData() {
+      const savedData = JSON.parse(localStorage.getItem('profileData'));
+      if (savedData) {
+        // Fill the form fields with saved data
+        firstNameInput.value = savedData.firstName;
+        middleNameInput.value = savedData.middleName;
+        lastNameInput.value = savedData.lastName;
+        emailInput.value = savedData.email;
+        birthdateInput.value = savedData.birthdate;
+        phoneNumberInput.value = savedData.phoneNumber;
+        genderSelect.value = savedData.gender;
+      }
+    }
+    
+    // Call the function to load saved data when the page loads
+    loadSavedData();
+    </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
