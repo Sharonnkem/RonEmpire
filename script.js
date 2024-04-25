@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Store the updated cart items back to local storage
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
+        // Update cart quantity display
+        updateCartQuantity();
+
         // Display a pop-up message
         const alertMessage = document.createElement('div');
         alertMessage.classList.add('alert');
@@ -59,15 +62,27 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             alertMessage.remove();
         }, 3000);
-    
     }
-
     // Add event listener to Add To Cart button
     const addToCartButton = document.querySelector('#prodetails .single-pro-details #add');
     addToCartButton.addEventListener('click', addToCart);
+    // Function to calculate total quantity of items in the cart and update the cart quantity display
+    function updateCartQuantity() {
+        // Retrieve cart items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Calculate total quantity of items in the cart
+        let totalQuantity = 0;
+        cartItems.forEach(item => {
+            totalQuantity += parseInt(item.quantity);
+        });
+
+        // Update the text content of the span element with id "item-count"
+        const itemCountSpan = document.getElementById('item-count');
+        itemCountSpan.textContent = totalQuantity;
+    }
+
 });
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Function to retrieve product details from local storage and add to cart
     function addToCartFromLocalStorage() {
@@ -114,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const removeIcon = newRow.querySelector('.remove-item');
         removeIcon.addEventListener('click', removeFromCart);
      });
-
         // Display subtotal and calculate total
         const cartSubtotalCell = document.querySelector('#td1');
         cartSubtotalCell.textContent = `$${subtotal.toFixed(2)}`;
@@ -170,14 +184,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //-----------------------------------------------------------------------------------------------------------------
 
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     
-
-    
-    
-    
-    
-   // Function to add item to wishlist
+// Function to add item to wishlist
     function addToWishlist() {
         // Clone the product element from the first page
         const productElement = document.querySelector("#sp .pro").cloneNode(true);
@@ -257,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Call the function to add items to wishlist from local storage
     addTowishlistFromLocalStorage();
-});
+});*/
 
 
 
@@ -365,74 +374,93 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         return productElement;
     }
-});
+});*/
 
 
 
 
-/*document.addEventListener("DOMContentLoaded", function() {
-    // Get the button and wishlist section
-    const addToWishlistBtn = document.getElementById("add1");
-    const wishlistSection = document.getElementById("wishlist");
-
-    // Add event listener to the "Add to wishlist" button
-    addToWishlistBtn.addEventListener("click", addToWishlist);
-
-    function addToWishlist() {
-        // Clone the product element from the first page
-        const productElement = document.querySelector("#sp .pro").cloneNode(true);
-
-        // Add remove button to the cloned product element
-        const removeBtn = document.createElement("button");
-        removeBtn.textContent = "Remove";
-        removeBtn.classList.add("remove-btn");
-        removeBtn.addEventListener("click", removeFromWishlist);
-        productElement.appendChild(removeBtn);
-
-        console.log (wishlistSection);
-
-        // Check if wishlist is empty
-        if (wishlistSection.childElementCount === 2) {
-            // 2 because there are already 2 elements in the wishlist section (h3, p,)
-            wishlistSection.innerHTML = ""; // Clear the default message
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to add item to wishlist
+     function addToWishlist() {
+        // Display a pop-up message
+         const alertMessage = document.createElement('div');
+         alertMessage.classList.add('alert');
+         alertMessage.textContent = 'Item has been added to the wishlist';
+         document.body.appendChild(alertMessage);
+ 
+         // Remove the alert message after a certain time (e.g., 3 seconds)
+         setTimeout(function() {
+             alertMessage.remove();
+         }, 3000);
+         // Clone the product element from the first page
+         const productElement = document.querySelector("#sp .pro").cloneNode(true);
+ 
+         // Add remove button to the cloned product element
+         const removeBtn = document.createElement("button");
+         removeBtn.textContent = "Remove";
+         removeBtn.classList.add("remove-btn");
+         removeBtn.addEventListener("click", removeFromWishlist);
+         productElement.appendChild(removeBtn);
+ 
+         // Store the updated cart items back to local storage
+         localStorage.setItem('productElement', JSON.stringify(productElement.outerHTML));
         }
+ 
+     // Add event listener to the "Add to wishlist" button
+     const addToWishlistBtn = document.getElementById("add1");
+     addToWishlistBtn.addEventListener("click", addToWishlist);
+ 
+     // Function to remove item from wishlist
+     function removeFromWishlist(event) {
+         const productElement = event.target.parentElement;
+         productElement.remove();
+ 
+         // If wishlist becomes empty, display default message
+         const wishlistSection = document.querySelector('#wishlist');
+         if (wishlistSection.childElementCount === 0) {
+             wishlistSection.innerHTML = `
+                 <h3> WISHLIST IS EMPTY</h3>
+                 <p>You don't have any product in the wishlist yet. You will find a lot of interesting products on our "Shop" page.</p>
+                 <a href="shop.html"><button class="normal">Return to shop</button></a>
+             `;
+         }
+     }
+ 
+     // Function to add items to wishlist from local storage
+     function addTowishlistFromLocalStorage() {
+         // Retrieve cart items from local storage
+         const productHTML = localStorage.getItem('productElement');
+         if (productHTML) {
+             // Select the wishlist section
+             const wishlistSection = document.querySelector('#wishlist');
+ 
+             // Check if wishlist is empty
+             if (wishlistSection.childElementCount === 2) {
+                 // 2 because there are already 2 elements in the wishlist section (h3, p,)
+                 wishlistSection.innerHTML = ""; // Clear the default message
+             }
+ 
+             // Create a new div element and set its innerHTML to the retrieved product HTML
+             const productElement = document.createElement('div');
+             productElement.innerHTML = productHTML;
+ 
+             // Add remove button to the product element
+             const removeBtn = document.createElement("button");
+             removeBtn.textContent = "Remove";
+             removeBtn.classList.add("remove-btn");
+             removeBtn.addEventListener("click", removeFromWishlist);
+             productElement.appendChild(removeBtn);
+ 
+             // Append the product element to the wishlist section
+             wishlistSection.appendChild(productElement);
+         }
+     }
+ 
+     // Call the function to add items to wishlist from local storage
+     addTowishlistFromLocalStorage();
+ });
+ 
 
-        // Append the cloned product element to the wishlist section
-        wishlistSection.appendChild(productElement);
-
-        // Show CSS-styled alert message
-        showAlert();
-    }
-
-    // Function to remove item from wishlist
-    function removeFromWishlist(event) {
-        const productElement = event.target.parentElement;
-        productElement.remove();
-
-
-        // If wishlist becomes empty, display default message
-        if (wishlistSection.childElementCount === 0) {
-            wishlistSection.innerHTML = `
-                <h3> WISHLIST IS EMPTY</h3>
-                <p>You don't have any product in the wishlist yet. You will find a lot of interesting products on our "Shop" page.</p>
-                <a href="shop.html"><button class="normal">Return to shop</button></a>
-            `;
-        }
-    }
-
-    // Function to display CSS-styled alert message
-    function showAlert() {
-        const alertMessage = document.createElement("div");
-        alertMessage.classList.add("alert");
-        alertMessage.textContent = "Item has been added to wishlist";
-        document.body.appendChild(alertMessage);
-
-        // Remove the alert after 3 seconds
-        setTimeout(() => {
-            alertMessage.remove();
-        }, 3000);
-    }
-});
 
   
 //---------------------------------------------------------------------------------------------------------

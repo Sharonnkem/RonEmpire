@@ -31,7 +31,7 @@ h6 {
 p {
   font-size: 16px;
   color: #465b52;
-  margin: 15px 0 20px 0;%
+  margin: 15px 0 20px 0;
 }
 
 .section-p1 {
@@ -75,6 +75,25 @@ body {
   padding-left: 70px;
 }
 
+#span2 {
+  position: relative;
+} 
+
+#header .span2  {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  background-color: #088178;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  right: -11px;
+  font-size: 0.5em;
+}
+
 #header .logo1 {
   width: 100%;
   height: 12vh;
@@ -94,7 +113,7 @@ body {
 
 #navbar li a{
   text-decoration: none;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
   color: #1a1a1a;
   transition: 0.3s ease;
@@ -1103,6 +1122,26 @@ textarea {
   #header {
     padding: 10px 10px;
   }
+
+  #span {
+  position: relative;
+} 
+
+#header .span  {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  background-color: #088178;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -15%;
+  right: -10px;
+  font-size: 0.4em;
+}
+
   #navbar {
     display: flex;
     flex-direction: column;
@@ -1198,6 +1237,14 @@ textarea {
 @media (max-width: 477px) {
   #header {
     padding: 10px 10px;
+  }
+  #header .span  {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -15%;
+    right: -8px;
+    font-size: 0.4em;
   }
   #mobile i{
     color: #1a1a1a;
