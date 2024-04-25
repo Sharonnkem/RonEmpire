@@ -91,7 +91,7 @@ body {
   position: absolute;
   top: -20%;
   right: -11px;
-  font-size: 0.5em;
+  font-size: 0.4em;
 }
 
 #header .logo1 {
@@ -1123,24 +1123,19 @@ textarea {
     padding: 10px 10px;
   }
 
-  #span {
-  position: relative;
-} 
-
-#header .span  {
-  display: flex;
-  width: 25px;
-  height: 25px;
-  background-color: #088178;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  position: absolute;
-  top: -15%;
-  right: -10px;
-  font-size: 0.4em;
-}
+  #header .span  {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: #088178;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: -5em;
+    margin-top: -3em;
+    font-size: 0.4em;
+  }
 
   #navbar {
     display: flex;
@@ -1156,82 +1151,82 @@ textarea {
     box-shadow: 0 40px 60px rgba(0,0,0,0.01);
     padding: 80px 0 0 10px;
     transition: 0.3s;
- }
- #navbar.active {
-  right: 0px;
- }
- #navbar li {
-  margin-bottom: 25px;
- }
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
 
- #mobile {
-  display: flex;
-  align-items: center;
- }
- #mobile i{
-  color: #1a1a1a;
-  font-size: 35px;
-  padding-left: 20px;
-  margin-right: 20px;
- }
- #close {
-  display: initial;
-  position: absolute;
-  top: 30px;
-  left:30px ;
-  color: #222;
-  font-size: 24px;
- }
- #lg-bag {
-  display: none;
- }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+  #mobile i{
+    color: #1a1a1a;
+    font-size: 35px;
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left:30px ;
+    color: #222;
+    font-size: 24px;
+  }
+  #lg-bag {
+    display: none;
+  }
 
- #hero {
-  height: 70vh;
-  padding: 0 80px;
-  background-position: top 30% right 30%;
- }
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
 
- #newsletter .form{
-  width: 70%;
- }
+  #newsletter .form{
+    width: 70%;
+  }
 
- .logo5 {
-  display: flex;
-  width: 50%;
-  height: 10vh;
- }
- /* signin page */
- #signin .sigin1 h2 {
-  font-size: 2em;
- }
- #phoneNumber,
- #password {
-  display: flex;
-  width: 80%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  .logo5 {
+    display: flex;
+    width: 50%;
+    height: 10vh;
+  }
+  /* signin page */
+  #signin .sigin1 h2 {
+    font-size: 2em;
+  }
+  #phoneNumber,
+  #password {
+    display: flex;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
- /* Contact Page */
- #form-details {
-  margin: 30px;
-  padding: 40px;
-}
+  /* Contact Page */
+  #form-details {
+    margin: 30px;
+    padding: 40px;
+  }
 
- #form-details form {
-  width: 50;
- }
+  #form-details form {
+    width: 50;
+  }
 
- #form-details img {
-  width: 55px;
-  height: 5vh;
-  border-radius: 80px;
-  margin-right: 5px;
- }
- .people {
-  margin-left: 20px;
- }
+  #form-details img {
+    width: 55px;
+    height: 5vh;
+    border-radius: 80px;
+    margin-right: 5px;
+  }
+  .people {
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 477px) {
@@ -1239,12 +1234,10 @@ textarea {
     padding: 10px 10px;
   }
   #header .span  {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    top: -15%;
-    right: -8px;
-    font-size: 0.4em;
+    width: 20px;
+    height: 20px;
+    margin-left: -2.5em;
+    margin-top: -3em;
   }
   #mobile i{
     color: #1a1a1a;
@@ -1290,7 +1283,7 @@ textarea {
   }
   #prodetails .single-pro-details {
     width: 100%;
-}
+  }
    /* About Page */
 
    #about-head {
@@ -1305,7 +1298,7 @@ textarea {
    }
    #about-app .video {
     width: 100%;
-}
+  }
   /* Cart Page */
   
   #cart-add {
@@ -1345,29 +1338,29 @@ textarea {
    flex-direction: column;
   }
 
- #contact-details .details {
-  width: 100%;
-  margin-bottom: 30px;
- }
+  #contact-details .details {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
- #contact-details .map {
-  width: 100%;
- }
+  #contact-details .map {
+    width: 100%;
+  }
 
- #form-details {
-  margin: 10px;
-  padding: 30px 10px;
-  flex-wrap: wrap;
- }
+  #form-details {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
 
- #form-details form {
-  width: 100%;
-  margin-bottom: 30px;
- }
+  #form-details form {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
- #form-details img {
-  height: 8vh;
- }
+  #form-details img {
+    height: 8vh;
+  }
 
 }
 

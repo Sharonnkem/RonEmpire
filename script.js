@@ -25,6 +25,9 @@ if (close) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Update cart quantity display
+    updateCartQuantity();
+    
     // Function to add items to the cart
     function addToCart() {
         // Select elements containing product details
