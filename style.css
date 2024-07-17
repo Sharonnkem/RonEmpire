@@ -83,7 +83,7 @@ body {
   display: flex;
   width: 18px;
   height: 18px;
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
   justify-content: center;
   align-items: center;
@@ -121,7 +121,7 @@ body {
 
 #navbar li a:hover,
 #navbar li a.active {
-  color: #088178;
+  color: purple;
 }
 
 #navbar li a.active::after,
@@ -129,7 +129,7 @@ body {
   content: "";
   width: 30%;
   height: 2px;
-  background: #088178;
+  background: purple;
   position: absolute;
   bottom: -4px;
   left: 20px;
@@ -165,17 +165,17 @@ body {
 }
 
 #hero h1 {
-  color: #088178;
+  color: purple;
 }
 
 #hero p {
-  color: #088178;
+  color: purple;
 }
 
 #hero button {
   background-image: url("img/buttonhero.png");
   background-color: transparent;
-  color: #088178;
+  color: purple;
   border: 0;
   padding: 14px 80px 14px 65px;
   background-repeat: no-repeat;
@@ -200,7 +200,7 @@ body {
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
-  border: 1px solid #cce7d0;
+  border: 1px solid rgb(232, 185, 232);
   border-radius: 25px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
@@ -243,7 +243,7 @@ body {
   padding-top: 7px;
   font-size: 15px;
   font-weight: 700;
-  color: #088178;
+  color: purple;
 }
 
 #product1 .pro .cart {
@@ -251,10 +251,10 @@ body {
   height: 40px;
   line-height: 40px;
   border-radius: 50px;
-  background-color: #e8f6ea;
+  background-color: rgb(239, 224, 239);
   font-weight: 500;
-  color: #088178;
-  border: 1px solid #cce7d0;
+  color: purple;
+  border: 1px solid rgb(232, 185, 232);
   position: absolute;
   bottom: 15px;
   right: 10px;
@@ -265,10 +265,10 @@ body {
   height: 40px;
   line-height: 40px;
   border-radius: 50px;
-  background-color: #e8f6ea;
+  background-color: rgb(239, 224, 239);
   font-weight: 500;
-  color: #088178;
-  border: 1px solid #cce7d0;
+  color: purple;
+  border: 1px solid rgb(232, 185, 232);
   position: absolute;
   bottom: 60px;
   right: 10px;
@@ -304,7 +304,7 @@ body {
 }
 
 #banner button:hover{
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
 
 }
@@ -354,7 +354,7 @@ body {
 }
 
 #newsletter button {
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
   white-space: nowrap;
   border-top-left-radius: 0;
@@ -411,7 +411,7 @@ footer .follow i {
 }
 
 footer .install .row img {
-  border: 1px solid #088178;
+  border: 1px solid purple;
   border-radius: 6px;
 }
 
@@ -421,7 +421,7 @@ footer .install img {
 
 footer .follow i:hover, 
 footer a:hover {
-  color: #088178;
+  color: purple;
 }
 
 footer .copyright {
@@ -456,7 +456,7 @@ footer .copyright {
 
 #pagination a {
   text-decoration: none;
-  background-color: #088178;
+  background-color: purple;
   padding: 15px 20px;
   border-radius: 4px;
   color: #fff;
@@ -523,7 +523,7 @@ footer .copyright {
 
 #prodetails .single-pro-details button,
 #form-details form button {
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
 }
 
@@ -689,7 +689,7 @@ footer .copyright {
   bottom: 80%;
   left: 55%;
   transform: translate(-50%, -50%);
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -789,7 +789,7 @@ footer .copyright {
 #subtotal button,
 #cart button, 
 #wishlist1 button {
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
   padding: 12px 20px;
 }
@@ -836,7 +836,7 @@ footer .copyright {
 
 #profile button:hover{
   box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
 }
 
@@ -960,7 +960,7 @@ form button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #088178;
+  background-color: purple;
   color: #fff;
   height: 10vh;
 }
@@ -1030,7 +1030,7 @@ textarea {
 }
 
 #signin .sigin1 {
-  background-color: #088178;
+  background-color: purple;
   padding: 20px; 
 }
 
@@ -1127,7 +1127,7 @@ textarea {
     display: flex;
     width: 25px;
     height: 25px;
-    background-color: #088178;
+    background-color: purple;
     color: #fff;
     justify-content: center;
     align-items: center;
